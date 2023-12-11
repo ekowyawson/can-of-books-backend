@@ -9,9 +9,9 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3001;
 
-app.get('/test', (request, response) => {
+app.get('/test', (req, res) => {
 
-  response.send('test request received')
+  res.send('test request received')
 
 })
 
