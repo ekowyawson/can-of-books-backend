@@ -66,46 +66,34 @@ This architecture ensures a separation of concerns, with the frontend handling t
 
 ## Change Log
 
-- 12-11-2023 6:49pm - Application now has a fully-functional express server, with GET routes and a MongoDB database.
-- 12-12-2023 1:45pm - Added config directory and a `db.js` file that holds the database connection logic.
+- **12-11-2023 6:49pm** - Application now has a fully-functional express server, with GET routes and a MongoDB database.
+- **12-12-2023 1:45pm** - Added config directory and a `db.js` file that holds the database connection logic.
 
 ## Estimates
 
 ### Setup Repositories
 
-**Name of feature**: Setup Repositories
-
-**Estimate of time needed to complete**: 10 Minutes
-
-**Start time**: 1730
-
-**Finish time**: 1745
-
-**Actual time needed to complete**: 15 Minutes
+- **Name of feature**: Setup Repositories
+- **Estimate of time needed to complete**: 10 Minutes
+- **Start time**: 1730
+- **Finish time**: 1745
+- **Actual time needed to complete**: 15 Minutes
 
 ### Setup Storage
 
-**Name of feature**: Setup Storage
-
-**Estimate of time needed to complete**: 1 Hour
-
-**Start time**: 1745
-
-**Finish time**: 1910
-
-**Actual time needed to complete**: 1 Hour 25 Minutes
+- **Name of feature**: Setup Storage
+- **Estimate of time needed to complete**: 1 Hour
+- **Start time**: 1745
+- **Finish time**: 1910
+- **Actual time needed to complete**: 1 Hour 25 Minutes
 
 ### Setup Book Component
 
-**Name of feature**: Setup Book Component
-
-**Estimate of time needed to complete**: 1 Hour
-
-**Start time**: 1910
-
-**Finish time**: 2130
-
-**Actual time needed to complete**: 2 Hours 20 Minutes
+- **Name of feature**: Setup Book Component
+- **Estimate of time needed to complete**: 1 Hour
+- **Start time**: 1910
+- **Finish time**: 2130
+- **Actual time needed to complete**: 2 Hours 20 Minutes
 
 ## Credit and Collaborations
 
