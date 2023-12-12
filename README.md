@@ -1,6 +1,7 @@
-# Can Of Books
+# Can of Books
 
 **Author**: Ekow Yawson
+
 **Version**: 1.0.0
 
 ## Overview
