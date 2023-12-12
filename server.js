@@ -13,6 +13,10 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3001;
 
+app.get('/', (req, res) => {
+    res.send("Welcome To Can Of Books.");
+})
+
 app.get('/books', seed);
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
