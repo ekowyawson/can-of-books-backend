@@ -20,19 +20,19 @@ router.get('/books', async (req, res) => {
 // @route   POST /books/add
 router.post('/addBook', async (req, res) => {
   try {
-    const q = req.query;
+    const body = req.body;
     let msg = {};
     // Check if a book with the same title already exists
-    const existingBook = await Book.findOne({ title: q.title });
+    const existingBook = await Book.findOne({ title: body.title });
     if (existingBook) {
       // If the book already exists, return the existing book
       msg = { 'Book already exists': existingBook };
-      res.json(msg);
+      res.status(401).send(msg);
     } else {
       // If the book doesn't exist, create it
-      await Book.create(q);
-      msg = {'Book added': q};
-      res.json(msg);
+      await Book.create(body);
+      msg = {'Book added': body};
+      res.status(200).send(msg);
     }
   } catch (err) {
     console.error(err);
