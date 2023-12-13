@@ -16,6 +16,9 @@ const bookSchema = new mongoose.Schema({
     enum: ['Available', 'Checked Out', 'Reserved', 'Lost'],
     default: 'Available',
   },
+  image: {
+    type: String
+  }
 });
 
 const Book = mongoose.model('Book', bookSchema);
