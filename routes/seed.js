@@ -20,19 +20,24 @@ router.get('/books', async (req, res) => {
 // @route   POST /books/add
 router.post('/addBook', async (req, res) => {
   try {
-    const body = req.body;
-    let msg = {};
+    let body = req.body;
     // Check if a book with the same title already exists
-    const existingBook = await Book.findOne({ title: body.title });
+    const existingBook = await Book.find({ title: body.title });
+    
     if (existingBook) {
-      // If the book already exists, return the existing book
-      msg = { 'Book already exists': existingBook };
-      res.status(401).send(msg);
+      body.similarTitles = existingBook.length;
+      // Create book and update the similarTitles numbers to match
+      const newBook = await Book.create(body);
+      await Book.updateMany(
+        {"title": body.title},
+        {"$set":{"similarTitles": existingBook.length}}
+      );
+
+      res.status(200).send(newBook);
     } else {
       // If the book doesn't exist, create it
-      await Book.create(body);
-      msg = {'Book added': body};
-      res.status(200).send(msg);
+      const newBook = await Book.create(body);
+      res.status(200).send(newBook);
     }
   } catch (err) {
     console.error(err);
@@ -72,6 +77,21 @@ router.delete('/books/:id', async (req, res) => {
 
     if (!deletedBook) {
       return res.status(404).json({ error: 'Book not found' });
+    }
+
+    const existingBooks = await Book.find({ title: deletedBook.title });
+    
+    if (existingBooks) {
+      let existingBooksCount = 0;
+
+      if(existingBooks.length > 1) {
+        existingBooksCount = existingBooks.length;
+      }
+
+      await Book.updateMany(
+        {"title": deletedBook.title},
+        {"$set":{"similarTitles": existingBooksCount}}
+      );
     }
 
     res.json({ message: 'Book deleted successfully', book: deletedBook });

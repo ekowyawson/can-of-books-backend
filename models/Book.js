@@ -11,13 +11,23 @@ const bookSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  author: {
+    type: String,
+    trim: true,
+    default: 'Unknown'
+  },
   status: {
     type: String,
     enum: ['Available', 'Checked Out', 'Reserved', 'Lost'],
     default: 'Available',
   },
+  similarTitles: {
+    type: Number,
+    default: 0,
+  },
   image: {
-    type: String
+    type: String,
+    default: 'None'
   }
 });
 
