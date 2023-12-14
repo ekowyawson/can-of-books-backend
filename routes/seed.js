@@ -60,8 +60,7 @@ router.put('/books/:id', async (req, res) => {
       return res.status(404).json({ error: 'Book not found' });
     }
 
-    const msg = ['Book updated:', updatedBook];
-    res.json(msg);
+    res.json(updatedBook);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Internal Server Error' });
