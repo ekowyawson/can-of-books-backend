@@ -1,14 +1,17 @@
 # Can of Books
 
-**Author**: Ekow Yawson
+- **Author**: Ekow Yawson
+- **Version**: 1.0.0
 
-**Version**: 1.0.0
-
-## Overview
+## OVERVIEW
 
 Welcome to the "Can of Books" app, a curated collection of top-notch books spanning various genres. This React application, powered by a Node.js backend using Express and MongoDB via Mongoose, allows users to explore a carefully selected list of books. Each book is presented in a dynamic carousel, showcasing its title, status, and a brief description. Whether you're an avid reader searching for your next literary adventure or simply curious about must-reads, the "Best Books" app has you covered.
 
-## Getting Started
+### LightHouse
+
+![Lighthouse](./assets/lighthouse.png)
+
+## GETTING STARTED
 
 To get started with the "Can of Books" app, follow these steps:
 
@@ -44,7 +47,7 @@ To get started with the "Can of Books" app, follow these steps:
    - Open your browser and go to `http://localhost:3000`.
    - Browse through the carousel to discover details about each book.
 
-## Architecture
+## ARCHITECTURE
 
 The "Can of Books" app follows a client-server architecture:
 
@@ -64,12 +67,24 @@ The "Can of Books" app follows a client-server architecture:
 
 This architecture ensures a separation of concerns, with the frontend handling the user interface and the backend managing data storage and retrieval. The collaboration between React, Express, and MongoDB creates a seamless and efficient web application experience for users exploring the "Can of Books."
 
-## Change Log
+## DEPENDENCIES
+
+```json
+{
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.17.1",
+    "mongoose": "^8.0.3"
+}
+```
+
+## CHANGE LOG
 
 - **12-11-2023 6:49pm** - Application now has a fully-functional express server, with GET routes and a MongoDB database.
 - **12-12-2023 1:45pm** - Added config directory and a `db.js` file that holds the database connection logic.
 
-## Estimates
+## ESTIMATES
 
 ### Setup Repositories
 
@@ -136,14 +151,16 @@ Make a list of each parson’s strengths.
 **Felix**:
 
 1. Great work ethic.
-2. Extensive knowledge of Git.
-3. Pays great attention to detail.
+2. Great with technical processes.
+3. Extensive knowledge of Git.
+4. Pays great attention to detail.
 
 **Ekow**:
 
-1. Extensive JavaScript knowledge.
-2. Great work ethic.
-3. Willingness to help others.
+1. Extensive Coding knowledge.
+2. Proficient with JavaScript, Node.js, MongoDB, REACT, Python, etc.
+3. Great work ethic.
+4. Willingness to help others.
 
 How can you best utilize these strengths in the development of your application?
 
@@ -153,12 +170,12 @@ How can you best utilize these strengths in the development of your application?
 In what areas do you each want to develop greater strength?
 
 - We both need to develop a better understanding of REACT and MongoDB and how to best utilize them
-  together to build MERN stack applications.
+  together to build **MERN** stack applications.
 
 Knowing that every person in your team needs to understand the code, how do you plan to approach the day-to-day development?
 
-- I plan to add descriptive comments and clear/concise language in my code to allow my partner to see exactly what
-  my code is doing.
+- We plan to add descriptive comments and clear/concise language in our code to allow each partner to see exactly what
+  the code is doing.
 
 ### Conflict Resolution
 
